@@ -5,10 +5,14 @@ import AppLayout from 'components/Layout'
 
 class AppRoute extends Component {
   static propTypes = {
-    component: PropTypes.object.isRequired,
-    cProps: PropTypes.object.isRequired,
+    component: PropTypes.func.isRequired,
     path: PropTypes.string.isRequired,
     exact: PropTypes.bool.isRequired,
+    cProps: PropTypes.object,
+  }
+
+  static defaultProps = {
+    cProps: null,
   }
 
   renderLayout = (props) => {

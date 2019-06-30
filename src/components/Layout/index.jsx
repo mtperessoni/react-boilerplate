@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'class-names'
+import Navbar from './Navbar'
+import SidePanel from './SidePanel'
 
 class Layout extends Component {
   static propTypes = {
@@ -16,7 +18,9 @@ class Layout extends Component {
     const { children, className } = this.props
 
     return (
-      <div className={ classNames('main-class', className) }>
+      <div className={ classNames('app', className) }>
+        <Navbar />
+        <SidePanel />
         { children }
       </div>
     )
