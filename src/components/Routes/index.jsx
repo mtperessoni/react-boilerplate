@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
 import AppLayout from 'components/Layout'
@@ -8,6 +8,7 @@ class AppRoute extends Component {
     component: PropTypes.object.isRequired,
     cProps: PropTypes.object.isRequired,
     path: PropTypes.string.isRequired,
+    exact: PropTypes.bool.isRequired,
   }
 
   renderLayout = (props) => {
@@ -21,14 +22,16 @@ class AppRoute extends Component {
   }
 
   render() {
-    const { path } = this.props
+    const { path, exact } = this.props
 
     return (
-      <Route
-        path={ path }
-        exact
-        component={ props => this.renderLayout(props) }
-      />
+      <Fragment>
+        <Route
+          path={ path }
+          exact={ exact }
+          component={ props => this.renderLayout(props) }
+        />
+      </Fragment>
     )
   }
 }

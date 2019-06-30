@@ -1,7 +1,7 @@
+import { hot } from 'react-hot-loader/root'
 import React, { Component } from 'react'
 import AppRoutes from './Routes'
 
-// Layout
 class Container extends Component {
   render() {
     return (
@@ -12,4 +12,4 @@ class Container extends Component {
   }
 }
 
-export default Container
+export default hot(Container)

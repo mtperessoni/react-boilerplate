@@ -334,6 +334,7 @@ module.exports = function(webpackEnv) {
                 babelrc: false,
                 configFile: false,
                 presets: [require.resolve('babel-preset-react-app')],
+                plugins: ['react-hot-loader/babel'],
                 // Make sure we have a unique cache identifier, erring on the
                 // side of caution.
                 // We remove this when the user ejects because the default
