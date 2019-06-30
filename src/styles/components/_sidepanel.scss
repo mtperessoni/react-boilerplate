@@ -3,14 +3,14 @@ div.sidepanel {
   top: 0;
   left: 0;
   z-index: 100;
-  min-width: 50px;
+  min-width: $sidepanel-width;
   height: 100%;
   background: $dark;
   color: white;
 
   li {
-    min-height: 55px;
-    line-height: 55px;
+    min-height: $navbar-height;
+    line-height: $navbar-height;
     text-align: center;
     vertical-align: middle;
   }

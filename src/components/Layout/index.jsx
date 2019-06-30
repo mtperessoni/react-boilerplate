@@ -21,7 +21,9 @@ class Layout extends Component {
       <div className={ classNames('app', className) }>
         <Navbar />
         <SidePanel />
-        { children }
+        <main className='content'>
+          { children }
+        </main>
       </div>
     )
   }
