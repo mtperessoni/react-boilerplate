@@ -13,5 +13,10 @@ div.sidepanel {
     line-height: $navbar-height;
     text-align: center;
     vertical-align: middle;
+    transition: 0.2s;
+  }
+
+  li:hover {
+    background: black;
   }
 }

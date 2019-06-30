@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
 import classNames from 'class-names'
 import Navbar from './Navbar'
 import SidePanel from './SidePanel'
@@ -22,11 +23,13 @@ class Layout extends Component {
         <Navbar />
         <SidePanel />
         <main className='content'>
-          { children }
+          <div className='container-fluid'>
+            { children }
+          </div>
         </main>
       </div>
     )
   }
 }
 
-export default Layout
+export default withRouter(Layout)

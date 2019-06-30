@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 const Navbar = () => {
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-white'>
-      <span className='navbar-brand ml-auto'>Boilerplate</span>
+      <span className='navbar-brand ml-auto border-left border-light pl-4'>Boilerplate</span>
     </nav>
   )
 }

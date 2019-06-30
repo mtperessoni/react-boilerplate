@@ -1,9 +1,10 @@
 main.content {
   background: $bg-color;
-  min-width: calc(100% - $sidepanel-width);
+  min-width: calc(100% - #{$sidepanel-width});
   margin-left: $sidepanel-width;
   margin-top: $navbar-height;
   background: $bg-color;
   padding: 10px;
-  height: calc(100vh - #{$navbar-height});
+  min-height: calc(100vh - #{$navbar-height});
+  max-height: 100%;
 }
