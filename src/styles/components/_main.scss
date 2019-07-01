@@ -1,6 +1,6 @@
 main.content {
   background: $bg-color;
-  min-width: calc(100% - #{$sidepanel-width});
+  max-width: calc(100% - #{$sidepanel-width});
   margin-left: $sidepanel-width;
   margin-top: $navbar-height;
   background: $bg-color;

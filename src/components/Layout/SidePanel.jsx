@@ -10,14 +10,14 @@ const SidePanel = (props) => {
           <Language />
         </li>
         <Link
-          to='/teste'
+          to='/'
         >
           <li className='border-bottom border-dark'>
             <Edit />
           </li>
         </Link>
         <Link
-          to='/testee'
+          to='/'
         >
           <li className='border-bottom border-dark'>
             <PanTool />

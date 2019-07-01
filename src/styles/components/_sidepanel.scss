@@ -6,7 +6,6 @@ div.sidepanel {
   min-width: $sidepanel-width;
   height: 100%;
   background: $dark;
-  color: white;
 
   li {
     min-height: $navbar-height;
@@ -14,9 +13,15 @@ div.sidepanel {
     text-align: center;
     vertical-align: middle;
     transition: 0.2s;
+    fill: white;
+    color: white;
   }
 
   li:hover {
     background: black;
+    svg {
+      fill: theme-color('primary');
+      color: theme-color('primary');
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, BrowserRouter as Router } from 'react-router-dom'
-import Route from 'components/Routes'
+import CustomRoute from 'components/Routes'
 import Main from 'containers/Main'
 
 class AppRoutes extends Component {
@@ -8,7 +8,7 @@ class AppRoutes extends Component {
     return (
       <Router>
         <Switch>
-          <Route
+          <CustomRoute
             path='/:subRoute?'
             exact
             component={ Main }

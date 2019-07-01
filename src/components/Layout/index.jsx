@@ -20,10 +20,12 @@ class Layout extends Component {
 
     return (
       <div className={ classNames('app', className) }>
-        <Navbar />
-        <SidePanel />
-        <main className='content'>
-          <div className='container-fluid'>
+        <header role='banner'>
+          <Navbar />
+        </header>
+        <main className='content container-fluid' role='main'>
+          <SidePanel />
+          <div role='presentation'>
             { children }
           </div>
         </main>
