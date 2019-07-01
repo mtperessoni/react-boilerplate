@@ -9,8 +9,8 @@ import logger from 'dev/logger'
 
 // reducers que devem ser persistidos
 const persistConfig = {
-  key: 'onidata',
-  whitelist: ['auth', 'user'],
+  key: 'boilerplate',
+  whitelist: [],
   storage,
 }
 
