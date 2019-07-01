@@ -12,6 +12,9 @@ class AppRoutes extends Component {
             path='/:subRoute?'
             exact
             component={ Main }
+            metaTitle='Route'
+            metaDescription='Main route'
+            metaKeywords='boilerplate, rotas, react'
           />
         </Switch>
       </Router>
