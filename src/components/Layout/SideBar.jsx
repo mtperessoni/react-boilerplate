@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 import { Language, Edit, PanTool } from '@material-ui/icons'
 
-const SidePanel = (props) => {
+export const SidebarContext = React.createContext({
+  showSideBar: false,
+  setSideBarVisible: () => {},
+})
+
+const SideBar = (props) => {
+  const { showSideBar } = useContext(SidebarContext)
+
   return (
-    <div className='sidepanel'>
+    <div className={ classNames('sidebar', {
+      'open': showSideBar,
+    }) }
+    >
       <ul className='list-unstyled'>
         <li className='border-bottom border-light'>
           <Language />
@@ -28,4 +39,4 @@ const SidePanel = (props) => {
   )
 }
 
-export default SidePanel
+export default SideBar

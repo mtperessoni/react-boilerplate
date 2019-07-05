@@ -1,10 +1,13 @@
 main.content {
   background: $bg-color;
-  max-width: calc(100% - #{$sidepanel-width});
-  margin-left: $sidepanel-width;
+  max-width: calc(100% - #{$sidebar-width});
+  margin-left: $sidebar-width;
   margin-top: $navbar-height;
   background: $bg-color;
   padding: 10px;
-  min-height: calc(100vh - #{$navbar-height});
   max-height: 100%;
+
+  .main-div {
+    min-height: calc(100vh - #{$navbar-height});
+  }
 }

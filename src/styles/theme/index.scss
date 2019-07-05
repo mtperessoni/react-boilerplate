@@ -7,6 +7,7 @@
     "success": $success,
   );
 
-  @import 'components/index.scss';
-  @import '~bootstrap/scss/bootstrap.scss';
+  @import 'components/index';
+  @import 'responsive/index';
+  @import '~bootstrap/scss/bootstrap';
 }

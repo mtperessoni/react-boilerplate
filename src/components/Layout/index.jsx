@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 import classNames from 'class-names'
 import Navbar from './Navbar'
-import SidePanel from './SidePanel'
+import SideBar, { SidebarContext } from './SideBar'
 
 class Layout extends Component {
   static propTypes = {
@@ -15,20 +15,43 @@ class Layout extends Component {
     className: '',
   }
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      showSideBar: false,
+    }
+  }
+
+  setSideBarVisible = (showSideBar) => this.setState({ showSideBar })
+
   render() {
     const { children, className } = this.props
+    const { showSideBar } = this.state
 
     return (
       <div className={ classNames('app', className) }>
-        <header role='banner'>
-          <Navbar />
-        </header>
-        <main className='content container-fluid' role='main'>
-          <SidePanel />
-          <div role='presentation'>
-            { children }
-          </div>
-        </main>
+        <SidebarContext.Provider value={ {
+          showSideBar,
+          setSideBarVisible: this.setSideBarVisible,
+        } }
+        >
+          <header role='banner'>
+            <Navbar />
+          </header>
+          <main className='content container-fluid' role='main'>
+            <SideBar />
+            <div
+              role='presentation'
+              onClick={(e) => {
+                e.preventDefault()
+                this.setSideBarVisible(false)
+              } }
+              className='main-div'
+            >
+              { children }
+            </div>
+          </main>
+        </SidebarContext.Provider>
       </div>
     )
   }
